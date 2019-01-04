@@ -1,4 +1,4 @@
-n ese enlace me salió solo el cambio que h//TURNO 24-GRUPO 03.
+//TURNO 24-GRUPO 03.
 //ENTREGABLE 4 – EJERCICIO 1.
 //María Arrojo Naveira.
 //Natalia Martín Íñiguez.
