@@ -1,4 +1,4 @@
-//TURNO 24-GRUPO 03.
+n ese enlace me salió solo el cambio que h//TURNO 24-GRUPO 03.
 //ENTREGABLE 4 – EJERCICIO 1.
 //María Arrojo Naveira.
 //Natalia Martín Íñiguez.
@@ -502,44 +502,6 @@ int rellenar_columnas(char tablero[FILAS][COLUMNAS],char ficha1,int ficha,struct
 	//a->secuencia[ficha] = col_escogida; //Guarda la columna en el apartado secuencia de la estructura
 	return col_escogida;
 }
-
-/*int rellenar_columnas2(char tablero[FILAS][COLUMNAS],char ficha2,int ficha,struct partida *a,char tablero_copia[FILAS][COLUMNAS]) 
-{	//Rellena las columnas del tablero con los datos introducidos para el jugador 2.
-	int i,j;
-	int col_escogida;
-	
-	do // Se ejecuta hasta que la columna introducida sea correcta.
-	{
-		printf("\nElige la columna en la que quiere introducir la ficha,jugador 2:");
-		
-		scanf("%d", &col_escogida);
-		
-		if(col_escogida > COLUMNAS || col_escogida < 1) 
-			printf("\nColumna no v%clida, introduzca una distinta.",160);
-	}
-	while (col_escogida > COLUMNAS || col_escogida < 1);
-	
-	if(tablero[1][col_escogida] == 'x' || tablero[1][col_escogida] == 'o')
-	{
-		do{
-			printf("\nColumna no v%clida, introduzca una distinta.",160);
-			scanf("%d",&col_escogida);
-			
-		} while((col_escogida>COLUMNAS || col_escogida <= 0) && tablero[1][col_escogida] != '-');
-	}
-	
-	for (i=(FILAS) ; i>=1 ; i--) 
-	{
-			if (tablero[i][col_escogida] == '-')
-			{
-			 	tablero[i][col_escogida] = ficha2;
-			 	tablero_copia[i][col_escogida] == ficha2;
-				i=0;
-			}			
-	}
-	a->secuencia[ficha]=col_escogida;
-	return col_escogida;
-}*/
 
 
 int buscar_ganador(char tablero[FILAS][COLUMNAS],char ficha1,char ficha2,struct partida a[MAX_PARTIDAS],int partidas_jugadas,char tablero_copia [FILAS][COLUMNAS])  
