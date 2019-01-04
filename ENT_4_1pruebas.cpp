@@ -1,7 +1,7 @@
 //TURNO 24-GRUPO 03.
-//ENTREGABLE 4 ñ EJERCICIO 1.
-//MarÌa Arrojo Naveira.
-//Natalia MartÌn ÕÒiguez.
+//ENTREGABLE 4 ‚Äì EJERCICIO 1.
+//Mar√≠a Arrojo Naveira.
+//Natalia Mart√≠n √ç√±iguez.
 
 
 
@@ -66,22 +66,22 @@ main()
 	
 	inicializar_partida(partidas);
 	for(o=0;o<COLUMNAS;o++) //Bucle for que inicializa la matriz columnas_introducidas, 
-		{					//la cual cuenta cu·ntas veces se selecciona una columna a 0 para poder utilizarla en el caso 3. 
+		{					//la cual cuenta cu√°ntas veces se selecciona una columna a 0 para poder utilizarla en el caso 3. 
 			contador_columnas[o]=0; //EN CADA POSICION O SE VA A SUMAR ++ CUANDO SE INTRODUZCA ESA COLUMNA.  
 		}
-	//Bucle que se ejecuta hasta que la opciÛn introducida sea 4.
+	//Bucle que se ejecuta hasta que la opci√≥n introducida sea 4.
 	do
 	{
 		/*
 		Bucle for que se repite hasta que se haya alcanzado el valor de max_partidas establecido al 
-		inicio del entregable o hasta que se seleccione la opciÛn 4.
+		inicio del entregable o hasta que se seleccione la opci√≥n 4.
 		*/
 		for(m=0; m<MAX_PARTIDAS;m++)
 		{	
 			
 			do{
 				printf ("\nEscoge una opci%cn",162);
-				menu();//Llamada a la funciÛn menu.
+				menu();//Llamada a la funci√≥n menu.
 				opcion = getch();
 				printf ("\n\nOpci%cn escogida: %c", 162, opcion);
 				
@@ -98,7 +98,7 @@ main()
 					if (partidas_jugadas >= MAX_PARTIDAS) 
 					{
 						printf("\n El n%cmero m%cximo de partidas jugadas ha sido alcanzado", 163,160);
-						break; //Vuelve al men˙ principal.
+						break; //Vuelve al men√∫ principal.
 					}
 						
 					
@@ -119,19 +119,19 @@ main()
 						{ 
 							printf("\n\n%cCon qu%c ficha quiere comenzar a jugar?(x / o):", 168,130);
 							ficha1 = getche();
-							ficha1=tolower(ficha1); //Pone el caracter escogido en min˙scula.
+							ficha1=tolower(ficha1); //Pone el caracter escogido en min√∫scula.
 						}
 						while (ficha1 != 'x' && ficha1 != 'o');
 						
 						//partidas[partidas_jugadas].ficha_comienzo = ficha1;
 						
 						
-						switch (ficha1)// Adjudica la ficha al jugador 2 en funciÛn de la escogida por el jugador 1.
+						switch (ficha1)// Adjudica la ficha al jugador 2 en funci√≥n de la escogida por el jugador 1.
 						{
 							case 'x': ficha2 = 'o'; break;
 							case 'o': ficha2 = 'x'; break;
 						}
-						do{ //Bucle que se ejecuta hasta que se encuentre un ganador o el tablero estÈ completo.
+						do{ //Bucle que se ejecuta hasta que se encuentre un ganador o el tablero est√© completo.
 						
 							
 					
@@ -145,13 +145,13 @@ main()
 							
 							champion = buscar_ganador(tablero,ficha1,ficha2, partidas,partidas_jugadas,tablero_copia);
 						//	printf("ficha 1 partida %d: %c", partidas_jugadas, partidas[partidas_jugadas].ficha_comienzo);
-							if (champion == 1) // Champion=1 a si la funciÛn ha encontrado un ganador.
+							if (champion == 1) // Champion=1 a si la funci√≥n ha encontrado un ganador.
 							{ 
 								dibujar_tablero(tablero_copia); 
 								break;	
 							}
 							
-							if(partidas[partidas_jugadas].fichas == FILAS*COLUMNAS) //Analiza si el tablero est· completo.
+							if(partidas[partidas_jugadas].fichas == FILAS*COLUMNAS) //Analiza si el tablero est√° completo.
 							{
 								printf("\n Empate");
 								dibujar_tablero(tablero);break;
@@ -180,13 +180,13 @@ main()
 						
 							champion = buscar_ganador(tablero,ficha1,ficha2, partidas,partidas_jugadas,tablero_copia);
 						//	printf("ficha 1 partida %d: %c", partidas_jugadas, partidas[partidas_jugadas].ficha_comienzo);
-							if (champion == 1)  // Champion=1 a si la funciÛn ha encontrado un ganador.
+							if (champion == 1)  // Champion=1 a si la funci√≥n ha encontrado un ganador.
 							{
 								dibujar_tablero(tablero_copia); 
 								break;
 							}
 							
-							if(partidas[partidas_jugadas].fichas == FILAS*COLUMNAS) //Analiza si el tablero est· completo. 
+							if(partidas[partidas_jugadas].fichas == FILAS*COLUMNAS) //Analiza si el tablero est√° completo. 
 							{
 								printf("\n Empate");
 								dibujar_tablero(tablero);
@@ -208,13 +208,13 @@ main()
 							partidas_jugadas++;
 							
 					
-					} break; // Vuelve al men˙ principal.
+					} break; // Vuelve al men√∫ principal.
 				}
 				case '2':
 					{
 						if (partidas_jugadas == 0) 
 						//Si no hay partidas jugadas almacenadas se sale del case 2 
-						//imprimiendo un mensaje de error y mostrando el men˙ de nuevo.
+						//imprimiendo un mensaje de error y mostrando el men√∫ de nuevo.
 						{
 							printf("\nNo hay partidas grabadas.");	
 							break;
@@ -259,12 +259,12 @@ main()
 						
 							if ((partidas[partida_elegida-1].ganador) == 1 || (partidas[partida_elegida-1].ganador) == 2) 
 							{
-								//Si localiza que alg˙n jugador ha ganado lo guarda en la estructura y lo imprime en el fichero.
+								//Si localiza que alg√∫n jugador ha ganado lo guarda en la estructura y lo imprime en el fichero.
 								if ((partidas[partida_elegida-1].fichas)%2==0) fichas_ganador=(partidas[partida_elegida-1].fichas)/2;
 								
 								else if((partidas[partida_elegida-1].fichas)%2!=0) fichas_ganador=(partidas[partida_elegida-1].fichas+1)/2;
 								
-								fprintf(fichero, "\nHa ganado el Jugador %d despuÈs de haber introducido %d fichas",partidas[partida_elegida-1].ganador, fichas_ganador);	
+								fprintf(fichero, "\nHa ganado el Jugador %d despu√©s de haber introducido %d fichas",partidas[partida_elegida-1].ganador, fichas_ganador);	
 							}
 							else if ((partidas[partida_elegida-1].ganador) == 0) 
 							{
@@ -281,19 +281,19 @@ main()
 				case '3': 
 					{
 						
-						if(partidas_jugadas == 0) //Vuelve a mostrar el men˙ si no hay partidas grabadas.
+						if(partidas_jugadas == 0) //Vuelve a mostrar el men√∫ si no hay partidas grabadas.
 						{
 							printf("\nNo hay partidas jugadas/grabadas.");	break;
 						}
 						else 
 						{
-							do { //Bucle del que se ejecuta hasta que se pulsa la opciÛn d.
+							do { //Bucle del que se ejecuta hasta que se pulsa la opci√≥n d.
 							
-								do{ //Bucle que se ejecuta si la opciÛn escogida es incorrecta.
+								do{ //Bucle que se ejecuta si la opci√≥n escogida es incorrecta.
 									printf("\nEscoge una opci%cn",162);
 									menu2();
 									opcion2 = getch();
-									opcion2 = tolower(opcion2); //Convierte en min˙scula la letra pulsada, para que en el caso de que se ponga sin querer en may˙sculas tambiÈn recoja el car·cter.
+									opcion2 = tolower(opcion2); //Convierte en min√∫scula la letra pulsada, para que en el caso de que se ponga sin querer en may√∫sculas tambi√©n recoja el car√°cter.
 									printf("\n\nOpci%cn escogida: %c", 162, opcion2);
 									if(opcion2 != 'a' && opcion2 != 'b' && opcion2 != 'c' && opcion2 != 'd') 
 									{
@@ -304,7 +304,7 @@ main()
 							
 								switch(opcion2)
 								{
-									case 'a': // OpciÛn que muestra el promedio de fichas.
+									case 'a': // Opci√≥n que muestra el promedio de fichas.
 										{
 											for(i=0;i<partidas_jugadas;i++) 
 											{
@@ -316,9 +316,9 @@ main()
 											break; 
 										}
 										
-									case 'b': //OpciÛn que muestra en quÈ columna se han introducido m·s fichas.
+									case 'b': //Opci√≥n que muestra en qu√© columna se han introducido m√°s fichas.
 										{ 
-											for(i=1;i<COLUMNAS;i++) //Va comparando el n˙mero de fichas que hay en cada columna de todas las partidas jugadas 
+											for(i=1;i<COLUMNAS;i++) //Va comparando el n√∫mero de fichas que hay en cada columna de todas las partidas jugadas 
 											{	
 												if(contador_columnas[mayor]<contador_columnas[i]) 
 												{
@@ -329,9 +329,9 @@ main()
 										
 											break;
 										}
-									case 'c': //OpciÛn que muestra la columna en la que se han introducido menos fichas.
+									case 'c': //Opci√≥n que muestra la columna en la que se han introducido menos fichas.
 										{ 
-											for(i=1;i<COLUMNAS;i++) //Va comparando el n˙mero de fichas que hay en cada columna de todas las partidas jugadas 
+											for(i=1;i<COLUMNAS;i++) //Va comparando el n√∫mero de fichas que hay en cada columna de todas las partidas jugadas 
 											{	
 												if(contador_columnas[menor]>contador_columnas[i]) 
 												{
@@ -365,7 +365,7 @@ main()
 }
 	
 
-void menu(void) //Imprime el men˙1.
+void menu(void) //Imprime el men√∫1.
 {
 	printf("\n1. Jugar partida");
 	printf("\n2. Exportar partida");
@@ -373,7 +373,7 @@ void menu(void) //Imprime el men˙1.
 	printf("\n4. Salir del programa");
 }
 
-void menu2(void) //Imprime el men˙ 2.
+void menu2(void) //Imprime el men√∫ 2.
 {
 	printf("\na. Promedio de fichas introducidas por partida");
 	printf("\nb. Columna en que m%cs fichas se introducen",160);
@@ -406,11 +406,11 @@ void dibuja_superior(void) //Imprime la parte de arriba de la tabla.
 	int j,i;
 	printf("\n%c",201);// Imprime la esquina superior izquierda de la tabla.
 	
-	for(j=0 ; j<COLUMNAS-1 ; j++)//Imprime la parte de arriba de la tabla(menos la ˙ltima casilla).
+	for(j=0 ; j<COLUMNAS-1 ; j++)//Imprime la parte de arriba de la tabla(menos la √∫ltima casilla).
 	{ 
 	   	printf("%c%c%c%c",205,205,205,203);//Imprime las separaciones de columna de la parte superior de la tabla.
 	}
-	printf("%c%c%c%c \n",205,205,205,187);//Imprime la ˙ltima casilla.
+	printf("%c%c%c%c \n",205,205,205,187);//Imprime la √∫ltima casilla.
 
 }
 
@@ -418,11 +418,11 @@ void dibuja_inferior(void) //Imprime la parte de abajo de la tabla.
 {
 	int i , j;
 	printf("\n%c",200);
-	for(j=1 ; j<COLUMNAS ; j++) //Imprime la parte de abajo de la tabla menos la ˙ltima casilla.
+	for(j=1 ; j<COLUMNAS ; j++) //Imprime la parte de abajo de la tabla menos la √∫ltima casilla.
 	{  
    		printf("%c%c%c%c",205,205,205,202);
 	}	
-	printf("%c%c%c%c",205,205,205,188);//Imprime la ˙ltima casilla y la esquina inferior derecha.
+	printf("%c%c%c%c",205,205,205,188);//Imprime la √∫ltima casilla y la esquina inferior derecha.
 }
 
 void dibujar_tablero( char tablero[FILAS][COLUMNAS]) //Imprime el tablero.
@@ -441,22 +441,22 @@ void dibujar_tablero( char tablero[FILAS][COLUMNAS]) //Imprime el tablero.
 				if (tablero[i][j]=='-') printf("   %c",186);
 				else printf(" %c %c",tablero[i][j],186);
 			}
-			printf("\n%c",204); //Salta a la lÌnea siguiente introduciendo la separaciÛn inicial de fila.
+			printf("\n%c",204); //Salta a la l√≠nea siguiente introduciendo la separaci√≥n inicial de fila.
 			
 			for(j=1;j<=COLUMNAS-1;j++)
 			{ 
 				printf("%c%c%c",205,205,205); //Imprime las barras horizontales.
 				printf("%c",206); //Imprime las crucetas que separan las casillas.
 			}
-			// ˙ltima columna.
+			// √∫ltima columna.
 			printf("%c%c%c",205,205,205); //Imprime la barra horizontal.
 			
-			printf("%c\n",185); //Imprime la separaciÛn final de fila.
+			printf("%c\n",185); //Imprime la separaci√≥n final de fila.
 			
 			i++;
 		} while(i<FILAS);
 		
-		//⁄ltima fila.
+		//√öltima fila.
 		printf("%c",186); //Imprime la primera barra vertical de la fila.
 		for(j=1;j<=COLUMNAS;j++)//For que se ejecuta hasta que la variable alcanza el valor de columnas introducido.
 		{ 
@@ -482,7 +482,7 @@ int rellenar_columnas(char tablero[FILAS][COLUMNAS],char ficha1,int ficha,struct
 	}
 	while((col_escogida > COLUMNAS || col_escogida < 1));
 	
-	if(tablero[1][col_escogida] == 'x' || tablero[1][col_escogida] == 'o') //Se ejecuta si la columna est· llena.
+	if(tablero[1][col_escogida] == 'x' || tablero[1][col_escogida] == 'o') //Se ejecuta si la columna est√° llena.
 	{
 		do{ // Se ejecuta hasta que la columna escogida sea correcta.
 			printf("\nColumna llena, introduzca una distinta.");
@@ -493,13 +493,13 @@ int rellenar_columnas(char tablero[FILAS][COLUMNAS],char ficha1,int ficha,struct
 	for (i=(FILAS) ; i>=1 ; i--)
 	{
 			if (tablero[i][col_escogida]=='-') 
-			{	//Si no hay ninguna ficha introducida en la posiciÛn la introduce.
+			{	//Si no hay ninguna ficha introducida en la posici√≥n la introduce.
 			 	tablero[i][col_escogida]=ficha1;
 			 	//tablero_copia[i][col_escogida] == ficha1;
 				i=0;
 			}			
 	}
-	a->secuencia[ficha] = col_escogida; //Guarda la columna en el apartado secuencia de la estructura
+	//a->secuencia[ficha] = col_escogida; //Guarda la columna en el apartado secuencia de la estructura
 	return col_escogida;
 }
 
@@ -543,7 +543,7 @@ int rellenar_columnas(char tablero[FILAS][COLUMNAS],char ficha1,int ficha,struct
 
 
 int buscar_ganador(char tablero[FILAS][COLUMNAS],char ficha1,char ficha2,struct partida a[MAX_PARTIDAS],int partidas_jugadas,char tablero_copia [FILAS][COLUMNAS])  
-{	//Recorre la matriz buscando alg˙n ganador. 
+{	//Recorre la matriz buscando alg√∫n ganador. 
 
 	int length=0; // Longitud de la secuencia encontrada.
 	int i,j,c,f,k,l;
@@ -562,8 +562,8 @@ int buscar_ganador(char tablero[FILAS][COLUMNAS],char ficha1,char ficha2,struct 
 			for(j=0 ; j<COLUMNAS ; j++)
 			{
 				
-				f=i+1; // f corresponde a i+1 porque el for comienza en i=0 pero la matriz tablero est· inicializada a partir del 1.
-				c=j+1; // c corresponde a j+1 porque el for comienza en j=0 pero la matriz tablero est· inicializada a partir del 1.
+				f=i+1; // f corresponde a i+1 porque el for comienza en i=0 pero la matriz tablero est√° inicializada a partir del 1.
+				c=j+1; // c corresponde a j+1 porque el for comienza en j=0 pero la matriz tablero est√° inicializada a partir del 1.
 				
 				if (tablero [f][c] != 'x' && tablero [f][c] != 'o') 
 				{
@@ -572,7 +572,7 @@ int buscar_ganador(char tablero[FILAS][COLUMNAS],char ficha1,char ficha2,struct 
 				if(simb == tablero [f][c])
 				{
 					tablero_copia[f][c] = toupper(tablero[f][c]);
-					//Almacena en tablero_copia una copia del tablero pero con los simbolos consecutivos en may˙sculas.
+					//Almacena en tablero_copia una copia del tablero pero con los simbolos consecutivos en may√∫sculas.
 					length++; // Si encuentra dos elementos iguales seguidos suma 1 a length.
 					
 					if(length>=RAYA)
@@ -602,7 +602,7 @@ int buscar_ganador(char tablero[FILAS][COLUMNAS],char ficha1,char ficha2,struct 
 					length = 1;
 					
 					for(k=1 ; k<=FILAS ; k++)
-					{	//Si no se encuentra ganador se vuelven a poner en min˙sculas las fichas.
+					{	//Si no se encuentra ganador se vuelven a poner en min√∫sculas las fichas.
 						for(l=1 ; l<=COLUMNAS ; l++)
 						{
 							tablero_copia[k][l] = tablero [k][l];
@@ -629,8 +629,8 @@ int buscar_ganador(char tablero[FILAS][COLUMNAS],char ficha1,char ficha2,struct 
 		
 			for(j=0 ; j<FILAS ; j++)
 			{
-				f=j+1; // f corresponde a f+1 porque el for empieza en j=0 pero la matriz tablero est· inicializada a partir del 1.
-				c=i+1; // c corresponde a i+1 porque el for empieza en i=0 pero la matriz tablero est· inicializada a partir del 1.
+				f=j+1; // f corresponde a f+1 porque el for empieza en j=0 pero la matriz tablero est√° inicializada a partir del 1.
+				c=i+1; // c corresponde a i+1 porque el for empieza en i=0 pero la matriz tablero est√° inicializada a partir del 1.
 				
 				if (tablero [f][c] != 'x' && tablero [f][c] != 'o') 
 					simb = ' ';
@@ -638,7 +638,7 @@ int buscar_ganador(char tablero[FILAS][COLUMNAS],char ficha1,char ficha2,struct 
 				if(simb == tablero [f][c])
 				{
 					tablero_copia[f][c] = toupper(tablero[f][c]);
-					//Almacena en tablero_copia una copia del tablero pero con los simbolos consecutivos en may˙sculas.
+					//Almacena en tablero_copia una copia del tablero pero con los simbolos consecutivos en may√∫sculas.
 					
 					length++; //Si encuentra dos elementos iguales seguidos suma 1 a length.
 					
@@ -667,7 +667,7 @@ int buscar_ganador(char tablero[FILAS][COLUMNAS],char ficha1,char ficha2,struct 
 					length = 1;
 					
 					for(k=1 ; k<=FILAS ; k++)
-					{	//Si no se encuentra ganador se vuelven a poner en min˙sculas las fichas.
+					{	//Si no se encuentra ganador se vuelven a poner en min√∫sculas las fichas.
 						for(l=1 ; l<=COLUMNAS ; l++)
 						{
 							tablero_copia[k][l] = tablero [k][l];
@@ -695,10 +695,10 @@ int buscar_ganador(char tablero[FILAS][COLUMNAS],char ficha1,char ficha2,struct 
 			for(j=0 ; j<COLUMNAS ; j++)
 			{
 				f= ((i+j) % FILAS)+1; 
-				/* f corresponde a ((i+j) % FILAS)+1 puesto que el for comienza en 0 y la matriz tablero est· inicializada a 1.
-				 Esta operaciÛn nos da las coordenadas de las filas al buscar en la diagonal de -45 grados.*/
+				/* f corresponde a ((i+j) % FILAS)+1 puesto que el for comienza en 0 y la matriz tablero est√° inicializada a 1.
+				 Esta operaci√≥n nos da las coordenadas de las filas al buscar en la diagonal de -45 grados.*/
 				 
-				c=j+1; //c corresponde a j+1 puesto que el for comienza en 0 y la matriz tablero est· inicializada a 1.
+				c=j+1; //c corresponde a j+1 puesto que el for comienza en 0 y la matriz tablero est√° inicializada a 1.
 		
 				if(f < fila_anterior)
 				{
@@ -715,7 +715,7 @@ int buscar_ganador(char tablero[FILAS][COLUMNAS],char ficha1,char ficha2,struct 
 				if( simb == tablero [f][c])
 				{
 					tablero_copia[f][c] = toupper(tablero[f][c]);
-					//Almacena en tablero_copia una copia del tablero pero con los simbolos consecutivos en may˙sculas.
+					//Almacena en tablero_copia una copia del tablero pero con los simbolos consecutivos en may√∫sculas.
 					
 					length++;//Si encuentra dos elementos iguales seguidos suma 1 a length.
 					
@@ -743,7 +743,7 @@ int buscar_ganador(char tablero[FILAS][COLUMNAS],char ficha1,char ficha2,struct 
 					length=1;
 					
 					for(k=1 ; k<=FILAS ; k++)
-					{	//Si no se encuentra ganador se vuelven a poner en min˙sculas las fichas.
+					{	//Si no se encuentra ganador se vuelven a poner en min√∫sculas las fichas.
 						for(l=1 ; l<=COLUMNAS ; l++)
 						{
 							tablero_copia[k][l] = tablero [k][l];
@@ -770,12 +770,12 @@ int buscar_ganador(char tablero[FILAS][COLUMNAS],char ficha1,char ficha2,struct 
 			for(j=0 ; j<COLUMNAS ; j++)
 			{
 				f= ((i+j) % FILAS)+1;
-				/* f corresponde a ((i+j) % FILAS)+1 puesto que el for comienza en 0 y la matriz tablero est· inicializada a 1.
-				 Esta operaciÛn nos da las coordenadas de las filas al buscar en la diagonal de 45 grados.*/
+				/* f corresponde a ((i+j) % FILAS)+1 puesto que el for comienza en 0 y la matriz tablero est√° inicializada a 1.
+				 Esta operaci√≥n nos da las coordenadas de las filas al buscar en la diagonal de 45 grados.*/
 				 
 				c=COLUMNAS-j;
 				/* c corresponde a COLUMNAS-j .
-					Esta operaciÛn nos da las coordenadas de las columnas al buscar en la diagonal de 45 grados.*/
+					Esta operaci√≥n nos da las coordenadas de las columnas al buscar en la diagonal de 45 grados.*/
 	
 				if(f < fila_anterior)
 				{
@@ -792,7 +792,7 @@ int buscar_ganador(char tablero[FILAS][COLUMNAS],char ficha1,char ficha2,struct 
 				if( simb == tablero [f][c])
 				{
 					tablero_copia[f][c] = toupper(tablero[f][c]);
-					//Almacena en tablero_copia una copia del tablero pero con los simbolos consecutivos en may˙sculas.
+					//Almacena en tablero_copia una copia del tablero pero con los simbolos consecutivos en may√∫sculas.
 					
 					length++;//Si encuentra dos elementos iguales seguidos suma 1 a length.
 					
@@ -819,7 +819,7 @@ int buscar_ganador(char tablero[FILAS][COLUMNAS],char ficha1,char ficha2,struct 
 					length=1;
 					
 					for(k=1 ; k<=FILAS ; k++)
-					{	//Si no se encuentra ganador se vuelven a poner en min˙sculas las fichas.
+					{	//Si no se encuentra ganador se vuelven a poner en min√∫sculas las fichas.
 						for(l=1 ; l<=COLUMNAS ; l++)
 						{
 							tablero_copia[k][l] = tablero [k][l];
