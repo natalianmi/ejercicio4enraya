@@ -135,7 +135,7 @@ main()
 						
 							
 					
-							partidas[partidas_jugadas].fichas++; //Suma 1 al campo fichas de la estructura.
+							//partidas[partidas_jugadas].fichas++; //Suma 1 al campo fichas de la estructura.
 							
 							printf("\nElige la columna en la que quiere introducir la ficha,jugador 1:");
 							
