@@ -236,7 +236,7 @@ main()
 							
 							printf("\nIndica el nombre del fichero:");
 							
-							gets(nombre);//Escanea el nombre del fichero.
+							scanf("%s",nombre);//Escanea el nombre del fichero.
 							
 							strcat(nombre,".txt");
 							
