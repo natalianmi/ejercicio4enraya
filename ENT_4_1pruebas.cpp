@@ -485,9 +485,14 @@ int rellenar_columnas(char tablero[FILAS][COLUMNAS],char ficha1,int ficha,struct
 	if(tablero[1][col_escogida] == 'x' || tablero[1][col_escogida] == 'o') //Se ejecuta si la columna está llena.
 	{
 		do{ // Se ejecuta hasta que la columna escogida sea correcta.
-			printf("\nColumna llena, introduzca una distinta.");
+			if (col_escogida > COLUMNAS || col_escogida <= 0) 
+				printf("\nColumna no v%clida, introduzca una distinta: ",160);
+				
+			else if(tablero[1][col_escogida]!='-')	
+				printf("\nColumna llena, introduzca una distinta: ");
+			
 			scanf("%d",&col_escogida);
-		} while((col_escogida > COLUMNAS || col_escogida <= 0) && tablero[1][col_escogida]!= '-');
+		} while((col_escogida > COLUMNAS || col_escogida <= 0) || tablero[1][col_escogida]!= '-');
 	}
 	
 	for (i=(FILAS) ; i>=1 ; i--)
